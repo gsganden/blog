@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <ownerEmail>
+      greg@gandenberger.org
+    </ownerEmail>
+  </head>
+  <body>
+    <outline text="&lt;b&gt;Daily&lt;/b&gt;">
+      <outline text="&lt;b&gt;First chance&lt;/b&gt;" />
+      <outline _complete="true" text="&lt;b&gt;Before work&lt;/b&gt;">
+        <outline _complete="true" text="Make sure Roomba made it home #sun #mon #wed #fri" />
+        <outline _complete="true" text="&lt;b&gt;Exercise&lt;/b&gt; #sat #wed">
+          <outline text="Swim #tues #wed #fri #sat">
+            <outline text="Week 2: 3x 5x200m medley (3000m)" />
+            <outline text="Week 3: 3x 6x200m medley (3600m)" />
+            <outline text="Week 4: 2x 7x200m medley (2800m)" />
+            <outline text="Week 5: 2x 8x200m medley (3200m)" />
+          </outline>
+          <outline text="&lt;a href=&quot;https://workflowy.com/#/1e5ea66971be&quot;&gt;Videos&lt;/a&gt;" />
+          <outline text="&lt;b&gt;Maintenance flow 1 @tues&lt;/b&gt;">
+            <outline text="&lt;b&gt;On back&lt;/b&gt;">
+              <outline text="Back anchor awareness" />
+              <outline text="Back anchor progression (marching)" />
+              <outline text="Extend leg in a half-bridge" />
+              <outline text="Perfect bridge" />
+              <outline text="Single-leg bridge" />
+            </outline>
+            <outline text="&lt;b&gt;On front&lt;/b&gt;">
+              <outline text="Front anchor awareness" />
+              <outline text="Front anchor progression (lifting legs)" />
+              <outline text="Front anchor challenge" />
+              <outline text="Plank push up" />
+            </outline>
+            <outline text="&lt;b&gt;Standing&lt;/b&gt;">
+              <outline text="Hip hinge" />
+              <outline text="Dead lift" />
+              <outline text="Squat" />
+              <outline text="Typewriter squat" />
+              <outline text="Dead lift with weight" />
+              <outline text="Squat with weight" />
+              <outline text="Running man" />
+            </outline>
+          </outline>
+          <outline text="&lt;b&gt;Maintenance flow 2 @fri&lt;/b&gt;">
+            <outline text="&lt;b&gt;On back&lt;/b&gt;">
+              <outline text="Back anchor awareness" />
+              <outline text="Back anchor progression (marching)" />
+              <outline text="Resisted bridge" />
+              <outline text="Butt buster bridge (pushing out on band)" />
+              <outline text="Back anchors challenge (dead bug)" _note="Progress to both legs coming down together&#10;" />
+              <outline text="Thoracic mobility on a foam roller" />
+            </outline>
+            <outline text="&lt;b&gt;On floor&lt;/b&gt;">
+              <outline text="Side plank" />
+              <outline text="&lt;a href=&quot;https://www.corebalancetraining.com/products/core-balance-training/categories/2149609966/posts/8386657&quot;&gt;Hip rotation active stretch&lt;/a&gt; (Sit with in/externally rotated hips, lift foot)" />
+              <outline text="&lt;a href=&quot;https://www.corebalancetraining.com/products/core-balance-training/categories/2149609980&quot;&gt;Shoulder opener active stretch&lt;/a&gt; (Child’s pose w/ hand lift)" />
+              <outline text="Kneeling / standing hip &amp; shoulder opener (Split stance, leg back, same arm up)" />
+            </outline>
+            <outline text="&lt;b&gt;Standing&lt;/b&gt;">
+              <outline text="Anchor triad marching" />
+              <outline text="Hip rotation control (split stance)" />
+              <outline text="Airplane" />
+              <outline text="Chair pose for spinal lengthening" />
+              <outline text="Core hanging (challenge)" _note="Keep both feet down for support while keeping pubic bone forward&#10;March&#10;Lift both legs, then touch down with one at a time" />
+            </outline>
+          </outline>
+        </outline>
+        <outline text="Swap out furnace filter if needed" />
+        <outline _complete="true" text="Make sure phone ringer is on" />
+        <outline _complete="true" text="Coffee time @weekend" />
+        <outline _complete="true" text="Get breakfast with coffee" />
+        <outline _complete="true" text="&lt;b&gt;In office&lt;/b&gt;">
+          <outline _complete="true" text="Put on lotion" />
+          <outline _complete="true" text="Process:">
+            <outline _complete="true" text="&lt;a href=&quot;https://mail.google.com/mail/u/0/&quot;&gt;Personal &lt;/a&gt;&lt;a href=&quot;https://mail.google.com/mail/u/0/&quot;&gt;email&lt;/a&gt;&lt;a href=&quot;https://mail.google.com/mail/u/0/&quot;&gt; inbox&lt;/a&gt;" />
+            <outline _complete="true" text="Notes" />
+            <outline _complete="true" text="Voicemails" />
+            <outline text="Alexa list" />
+          </outline>
+          <outline _complete="true" text="Get quotes @workday" />
+          <outline text="Put on chapstick" />
+        </outline>
+        <outline _complete="true" text="&lt;b&gt;In bathroom&lt;/b&gt;">
+          <outline _complete="true" text="Take shower" />
+          <outline _complete="true" text="&lt;b&gt;Clean ears&lt;/b&gt;">
+            <outline text="Flush ears" />
+            <outline text="Clean ears with Q-tip" />
+          </outline>
+          <outline _complete="true" text="&lt;b&gt;Shave&lt;/b&gt;">
+            <outline text="Face" />
+            <outline text="Left arm moles" />
+          </outline>
+          <outline _complete="true" text="&lt;b&gt;Get ready to go&lt;/b&gt;">
+            <outline _complete="true" text="Get dressed" />
+            <outline _complete="true" text="Put on deodorant" />
+            <outline text="Do hair" />
+          </outline>
+          <outline text="&lt;b&gt;Take care of teeth&lt;/b&gt;">
+            <outline text="Brush teeth" />
+            <outline text="Use mouthwash" />
+          </outline>
+        </outline>
+        <outline _complete="true" text="Make workday calls @workday" />
+        <outline _complete="true" text="Put in laundry @weekday">
+          <outline text="Towels @mon " />
+          <outline text="Me @tues" />
+          <outline text="Bedding / rags (cleaning day) @wed " />
+          <outline text="Towels @thurs" />
+          <outline text="Cillian @fri " />
+        </outline>
+        <outline _complete="true" text="Start Roomba upstairs @weekday " />
+      </outline>
+      <outline _complete="true" text="&lt;b&gt;After work &lt;/b&gt;">
+        <outline _complete="true" text="Fill cup" />
+        <outline _complete="true" text="Take vitamin @early" />
+        <outline _complete="true" text="Take Roomba home @weekday" />
+        <outline _complete="true" text="Deal with laundry @weekday" />
+        <outline _complete="true" text="&lt;b&gt;With Kasey&lt;/b&gt;">
+          <outline _complete="true" text="Walk Violet" />
+          <outline _complete="true" text="Get out dog bag, if needed" />
+          <outline _complete="true" text="Spend time together" />
+          <outline text="Asana task&lt;i&gt;s&lt;/i&gt;" />
+        </outline>
+        <outline _complete="true" text="&lt;b&gt;With kids&lt;/b&gt;">
+          <outline _complete="true" text="Kids take out trash and recycling @sun" />
+          <outline _complete="true" text="Have kids do &lt;a href=&quot;https://drive.google.com/drive/u/0/folders/1rpM9oU-YVWqVtQJO3uyrnxxIcZf2jNhQ&quot;&gt;jobs&lt;/a&gt; @early" />
+          <outline _complete="true" text="&lt;b&gt;With Bennet&lt;/b&gt;">
+            <outline text="Do Anki cards" />
+            <outline text="Talk" />
+          </outline>
+          <outline _complete="true" text="&lt;b&gt;With Cillian&lt;/b&gt;">
+            <outline text="Do Anki cards" />
+            <outline _complete="true" text="WildStang tonight? @weekday #mon #fri " />
+            <outline _complete="true" text="Review grades and assignments @fri " />
+          </outline>
+          <outline text="&lt;b&gt;With Alice&lt;/b&gt;">
+            <outline _complete="true" text="Do Anki cards " />
+            <outline text="Read" />
+          </outline>
+        </outline>
+        <outline _complete="true" text="&lt;b&gt;In office&lt;/b&gt;">
+          <outline _complete="true" text="&lt;b&gt;Learn &lt;/b&gt;@early">
+            <outline _complete="true" text="Do at least one &quot;With pencil and paper&quot;  / &quot;On computer&quot; Anki card" />
+            <outline _complete="true" text="Skim &lt;a href=&quot;https://mail.google.com/mail/u/0/#label/DS&quot;&gt;DS newsletters&lt;/a&gt;" />
+            <outline text="Skim &lt;a href=&quot;https://x.com/i/lists/1505343077661167617&quot;&gt;Twitter&lt;/a&gt;" />
+          </outline>
+          <outline _complete="true" text="Put on lotion" />
+          <outline _complete="true" text="Put on chapstick" />
+          <outline _complete="true" text="Process:">
+            <outline _complete="true" text="&lt;a href=&quot;https://mail.google.com/mail/u/0/&quot;&gt;Personal &lt;/a&gt;&lt;a href=&quot;https://mail.google.com/mail/u/0/&quot;&gt;email&lt;/a&gt;&lt;a href=&quot;https://mail.google.com/mail/u/0/&quot;&gt; inbox&lt;/a&gt;" />
+            <outline text=" Notes" />
+          </outline>
+          <outline _complete="true" text="&lt;b&gt;Deal with calendars&lt;/b&gt;">
+            <outline _complete="true" text="Make sure notifications are set for personal events tomorrow " />
+            <outline _complete="true" text="Look at calendar two days out" />
+            <outline text="Adjust morning alarm" />
+          </outline>
+          <outline _complete="true" text="Close out personal calendars for today" />
+          <outline text="Close out personal GTD for today" />
+          <outline _complete="true" text="Set up weekly / monthly @fri @early" />
+        </outline>
+        <outline _complete="true" text="&lt;b&gt;Around house&lt;/b&gt;">
+          <outline _complete="true" text="Take down dishes from office" />
+          <outline _complete="true" text="Work on dishes" />
+          <outline _complete="true" text="Process physical inbox #away" />
+          <outline _complete="true" text="Put clothes in backpack or bathroom for tomorrow @early" />
+          <outline _complete="true" text="Get &lt;a href=&quot;https://www.amazon.com/spr/returns/history?ref_=orc_spr_return_center_view_more_returns_ref&amp;returnSessionId=7dd6891d-c8e8-4f2a-b555-d73267f7e2f8&amp;recordData=false&quot;&gt;Amazon returns&lt;/a&gt; together @sat" />
+          <outline _complete="true" text="Put my swim stuff and clothes in laundry for tomorrow @mon" />
+          <outline _complete="true" text="Make sure stuff is ready and defrosting for &lt;a href=&quot;https://drive.google.com/drive/u/0/folders/1EoOP-K0mjinet7lQ_bJdwtsPPZTL9Q0u&quot;&gt;weekend meals&lt;/a&gt; @fri" />
+          <outline _complete="true" text="Refill Violet's water @wed" />
+          <outline _complete="true" text="Confirm Violet has food and water @sun" />
+          <outline text="&lt;a href=&quot;https://workflowy.com/#/bf572ec1485b&quot;&gt;Practice &lt;/a&gt;&lt;a href=&quot;https://workflowy.com/#/bf572ec1485b&quot;&gt;sax&lt;/a&gt;&lt;a href=&quot;https://workflowy.com/#/bf572ec1485b&quot;&gt;o&lt;/a&gt;&lt;a href=&quot;https://workflowy.com/#/bf572ec1485b&quot;&gt;phone&lt;/a&gt; @early">
+            <outline text="&lt;a href=&quot;https://docs.google.com/document/d/1UKG290Axlarq32uKpsthKiDOuClWagYDJRWmNYj7p5Y/edit?tab=t.0&quot;&gt;Reed experiment log&lt;/a&gt;" />
+            <outline text="&lt;a href=&quot;https://gsganden.pythonanywhere.com/&quot;&gt;Reed rotator&lt;/a&gt;" />
+          </outline>
+        </outline>
+      </outline>
+      <outline text="&lt;b&gt;Wrap up day around house&lt;/b&gt;">
+        <outline _complete="true" text="&lt;b&gt;Deal with job sheets&lt;/b&gt; @fri">
+          <outline text="&lt;a href=&quot;https://drive.google.com/drive/folders/1rpM9oU-YVWqVtQJO3uyrnxxIcZf2jNhQ&quot;&gt;Open folder&lt;/a&gt;" />
+          <outline text="Do this week's paydays" />
+          <outline text="Create sheets for next week" />
+        </outline>
+        <outline _complete="true" text="Announce “plug in electronics”" />
+        <outline _complete="true" text="&lt;b&gt;On main floor&lt;/b&gt;">
+          <outline _complete="true" text="Put Violet out" />
+          <outline _complete="true" text="Make sure garage is closed" />
+          <outline _complete="true" text="Lock windows" />
+          <outline _complete="true" text="&lt;b&gt;Set up for Roomba&lt;/b&gt; @weekday #tues #thurs">
+            <outline text="Turn Roomba schedule on or off if needed" />
+            <outline text="Make sure interior doors are open" />
+            <outline text="Pick up floors " />
+          </outline>
+          <outline _complete="true" text="Lock front door" />
+          <outline _complete="true" text="Turn front porch light on" />
+          <outline _complete="true" text="&lt;b&gt;In kitchen&lt;/b&gt;">
+            <outline text="Put cup in dishwasher" />
+            <outline text="Start dishwasher " />
+            <outline text="Make sure dishwasher started" />
+            <outline text="Get cup ready for tomorrow" />
+            <outline text="Wipe counter" />
+          </outline>
+          <outline _complete="true" text="Make sure C took medicine" />
+          <outline _complete="true" text="Swap out furnace filter if low below 45" />
+          <outline _complete="true" text="Bring Violet in" />
+          <outline text="Turn off back deck light" />
+          <outline text="Lock back door" />
+        </outline>
+        <outline text="&lt;b&gt;In office area&lt;/b&gt;">
+          <outline _complete="true" text="Crack hall window?" />
+          <outline _complete="true" text="Plug in electronics">
+            <outline _complete="true" text="Family phone" />
+            <outline text="Cillian's phone" />
+            <outline _complete="true" text="Cillian’s personal iPad" />
+            <outline _complete="true" text="Cillian’s school iPad" />
+            <outline _complete="true" text="A Chromebook" />
+            <outline _complete="true" text="B Chromebook " />
+            <outline _complete="true" text="Switch" />
+            <outline _complete="true" text="Switch Lite" />
+            <outline text="PC" />
+          </outline>
+          <outline _complete="true" text="Put coconut oil on eyebrows @frI" />
+          <outline _complete="true" text="Kennel Violet" />
+          <outline _complete="true" text="Make sure &lt;a href=&quot;https://console.paperspace.com/tgebgb66pd/machines&quot;&gt;instances&lt;/a&gt; are turned off" />
+          <outline text="&lt;b&gt;Set up this list for tomorrow&lt;/b&gt;">
+            <outline _complete="true" text="Put on lotion" />
+            <outline text="Uncheck Daily">
+              <outline text="Export it to ~/Downloads/wf.opml" />
+              <outline text="Run bash command to uncheck" _note="awk 'NR &amp;gt; 1' ~/Downloads/wf.opml | sed 's/_complete=&quot;true&quot;//g' | pbcopy" />
+              <outline text="Paste clipboard contents into Workflowy" />
+            </outline>
+            <outline text="Run completer script and follow it" _note="cd &amp;&amp; source .venv/bin/activate &amp;&amp; python ~/workflowy/&lt;a href=&quot;http://complete_daily.py&quot;&gt;complete_daily.py&lt;/a&gt;" />
+          </outline>
+        </outline>
+        <outline text="&lt;b&gt;Take care of teeth&lt;/b&gt;">
+          <outline text="Grab a book" />
+          <outline text="Brush teeth" />
+          <outline text="Floss" />
+          <outline text="Use mouthwash" />
+        </outline>
+      </outline>
+    </outline>
+  </body>
+</opml>

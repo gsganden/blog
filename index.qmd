@@ -1,5 +1,5 @@
 ---
-title: "blog"
+title: "Greg Gandenberger"
 listing:
   contents: posts
   sort: "date desc"
