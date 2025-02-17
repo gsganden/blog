@@ -107,7 +107,7 @@ With a weighted arithmetic mean $A_\gamma$, the relative importance of precision
 
 A metric that places more importance on recall when recall is low compared to precision and vice versa has level curves that curve upward:
 
-<iframe src="plots/weighted_harmonic_mean_curves.html" width="100%" height="550" frameborder="0"></iframe>
+<iframe src="plots/weighted_harmonic_mean_curves4.html" width="100%" height="550" frameborder="0"></iframe>
 
 One way to think about the harmonic mean is that **it deviates from the arithmetic mean in the direction of the minimum**, as we will see more clearly when we discuss weighted power means in the next post in this series. The weighted harmonic mean of a set of numbers with a given weighting $\gamma$ is always less than the arithmetic mean with the same $\gamma$ (unless all of the numbers are the same, in which case the arithmetic and harmonic means are equal.)
 
@@ -190,3 +190,5 @@ Subsequent posts in this series will situate the arithmetic, geometric, and harm
 # Acknowledgements
 
 Thanks to Nicole Carlson, Morgan Cundiff, and the rest of the ShopRunner data science team for comments on earlier versions of this material.
+
+*Originally published at [medium.com](https://medium.com/@gsganden/https-medium-com-shoprunner-evaluating-classification-models-3-cabb9660ea5b)* 

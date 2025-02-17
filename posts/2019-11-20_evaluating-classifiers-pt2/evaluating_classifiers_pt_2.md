@@ -93,4 +93,4 @@ $$
 
 Thanks to Nicole Carlson, Ali Vanderveld, and the rest of the ShopRunner data science team for comments on earlier versions of this material.
 
-*Originally published at [medium.com](https://medium.com/shoprunner/evaluating-classification-models-2-64e9e21f9038)* 
+*Originally published at [medium.com](https://medium.com/@gsganden/https-medium-com-gsganden-evaluating-classification-models-2-64e9e21f9038)* 

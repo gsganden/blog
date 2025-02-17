@@ -278,7 +278,7 @@ ul.task-list li input[type="checkbox"] {
 \]</span></p>
 <p>With a weighted arithmetic mean <span class="math inline">\(A_\gamma\)</span>, the relative importance of precision and recall is fixed: that metric says that we are willing to trade one unit of precision for <span class="math inline">\(\gamma\)</span> or more units of recall <em>regardless of the current precision and recall</em>. <strong>With a weighted harmonic mean <span class="math inline">\(F_\beta\)</span>, by contrast, the relative importance of precision and recall depends on their current values.</strong> For instance, suppose that recall is <span class="math inline">\(80\%\)</span>. If precision is <span class="math inline">\(98\%\)</span>, then you might value a <span class="math inline">\(1\%\)</span> increase in recall more than a <span class="math inline">\(1\%\)</span> increase in precision, whereas if precision is <span class="math inline">\(10\%\)</span>, then you might care more about increasing precision.</p>
 <p>A metric that places more importance on recall when recall is low compared to precision and vice versa has level curves that curve upward:</p>
-<iframe src="plots/weighted_harmonic_mean_curves.html" width="100%" height="550" frameborder="0">
+<iframe src="plots/weighted_harmonic_mean_curves4.html" width="100%" height="550" frameborder="0">
 </iframe>
 <p>One way to think about the harmonic mean is that <strong>it deviates from the arithmetic mean in the direction of the minimum</strong>, as we will see more clearly when we discuss weighted power means in the next post in this series. The weighted harmonic mean of a set of numbers with a given weighting <span class="math inline">\(\gamma\)</span> is always less than the arithmetic mean with the same <span class="math inline">\(\gamma\)</span> (unless all of the numbers are the same, in which case the arithmetic and harmonic means are equal.)</p>
 <p>One benefit of using <span class="math inline">\(\beta\)</span> instead of <span class="math inline">\(\gamma\)</span> is that <strong><span class="math inline">\(\beta\)</span> indicates how much we care about recall relative to precision</strong>. More precisely, <span class="math inline">\(\beta\)</span> is the ratio of recall to precision where the harmonic mean places equal value on a one-unit increase in recall and a one-unit increase in precision (in the limit as the size of the unit goes to zero). <strong>If recall is more important to you than precision, for instance, then you would set <span class="math inline">\(\beta\)</span> greater than one</strong> because you would rather have a one-unit increase in recall than a one-unit increase in precision unless recall is already high compared to precision.</p>
@@ -359,6 +359,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="acknowledgements" class="level1">
 <h1>Acknowledgements</h1>
 <p>Thanks to Nicole Carlson, Morgan Cundiff, and the rest of the ShopRunner data science team for comments on earlier versions of this material.</p>
+<p><em>Originally published at <a href="https://medium.com/@gsganden/https-medium-com-shoprunner-evaluating-classification-models-3-cabb9660ea5b">medium.com</a></em></p>
 
 
 </section>
