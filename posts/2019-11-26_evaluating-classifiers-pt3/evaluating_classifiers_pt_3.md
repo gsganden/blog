@@ -1,5 +1,5 @@
 ---
-title: "Evaluating Classification Models, Part 3: $F_\beta$ and Other Weighted Pythagorean Means of Precision and Recall"
+title: "Evaluating Classification Models, Part 3: Fᵦ and Other Weighted Pythagorean Means of Precision and Recall"
 author: "Greg Gandenberger"
 date: "2019-11-26"
 categories: [ml, evals]
