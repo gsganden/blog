@@ -19,3 +19,5 @@ execute:
   freeze: auto
 resources:
   - CNAME
+comments:
+  hypothesis: true
