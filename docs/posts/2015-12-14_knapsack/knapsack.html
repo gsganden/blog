@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2015-12-14">
+
+<title>Blog - Hypothesis Test Construction as a Knapsack Problem</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Hypothesis Test Construction as a Knapsack Problem</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">statistics</div>
+                <div class="quarto-category">philosophy</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 14, 2015</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Neyman and Pearson (e.g.&nbsp;<a href="https://www.jstor.org/stable/91247?seq=1#page_scan_tab_contents">1933</a>) treat the problem of choosing the best rejection region for a simple-vs.-simple hypothesis test as what computer scientists call a 0/1 knapsack problem. <strong>Standard examples of 0/1 knapsack problems are easier to grasp than hypothesis testing problems, so thinking about Neyman-Pearson test construction on analogy with those examples is helpful for developing intuitions. It is also illuminating to think about points of disanalogy between those scenarios and hypothesis testing scenarios, which give rise to possible objections to the Neyman-Pearson approach.</strong></p>
+<section id="the-01-knapsack-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-01-knapsack-problem">The 0/1 Knapsack Problem</h2>
+<p>In a knapsack problem, one seeks to <strong>maximize some quantity subject to a constraint.</strong> A standard example is that of a thief who wants to maximize the value of the objects she steals from a particular home, subject to the constraint that the total weight of those objects cannot be greater than the maximum weight that she can carry. For instance, suppose the thief has the following items to choose from.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 10%">
+<col style="width: 15%">
+<col style="width: 11%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Clock</th>
+<th>Painting</th>
+<th>Radio</th>
+<th>Vase</th>
+<th>Book</th>
+<th>Computer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Value (USD)</td>
+<td>175</td>
+<td>90</td>
+<td>20</td>
+<td>50</td>
+<td>10</td>
+<td>200</td>
+</tr>
+<tr class="even">
+<td>Weight (lb.)</td>
+<td>10</td>
+<td>9</td>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>Value/Weight (USD/lb.)</td>
+<td>17.5</td>
+<td>10</td>
+<td>5</td>
+<td>25</td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>One possible approach to this problem is to <strong>choose objects in order of descending value/weight ratio</strong> until adding the next object would cause the total weight to exceed the limit. In this example, given enough space, that approach would lead one to choose first the vase, then the clock, then either the computer, the book, or the painting, and so on. <strong>This approach has the following virtue: it yields a set of objects that has at least as much value as any other set with the same or less total weight.</strong> However, there may be a set of objects that has greater value within the maximum weight limit. For instance, if the maximum weight is 10 lb., then this approach would lead one to take the vase only, because the next object, the clock, would put one over that weight limit. This choice provides more value than any other choice with the same total weight (2lb.). However, there are other choices with total weight less than 10 lbs. and greater value: for instance, one could take just the clock, or the vase, radio, and book.</p>
+<p>In the 0/1 knapsack problem, each item is either in the knapsack or not. An easier problem is the <strong>continuous knapsack program</strong>, in which objects can be arbitrarily broken up into smaller objects, preserving the ratios of their basic attributes. For instance, if the objects were things like gold bullion and crude oil, the thief might be able to take arbitrary quantities of those items at a fixed value/weight ratio. The optimal solution to the thief’s problem in this case would be to fill up on each item as much as possible in order of descending value/weight ratio, stopping precisely when the maximum weight is reached.</p>
+</section>
+<section id="hypothesis-testing" class="level2">
+<h2 class="anchored" data-anchor-id="hypothesis-testing">Hypothesis Testing</h2>
+<p>Suppose one wanted to test a null hypothesis <span class="math inline">\(H_0\)</span> against an alternative hypothesis <span class="math inline">\(H_a\)</span>. In the simplest case, <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_a\)</span> are both “simple statistical hypotheses” relative to some proposed experiment, meaning that they each specify a particular chance distribution over the sample space <span class="math inline">\(S\)</span> of possible outcomes of that experiment. <strong>Our task is to decide which elements of <span class="math inline">\(S\)</span> to place in the “rejection region” <span class="math inline">\(R\)</span></strong>, that is, the precise set of results on which will reject <span class="math inline">\(H_0\)</span> for <span class="math inline">\(H_a\)</span>.</p>
+<p>Neyman and Pearson propose to choose a test on the basis of <em>power</em> and <em>Type I error rate</em>, where a test’s power is the probability that it correctly rejects <span class="math inline">\(H_0\)</span> if <span class="math inline">\(H_0\)</span> is false, and its Type I error rate is the probability that it incorrectly rejects <span class="math inline">\(H_0\)</span> if <span class="math inline">\(H_0\)</span> is true. Specifically, they propose to choose a test that maximizes power subject to the constraint that the Type I error rate cannot exceed some maximum value <span class="math inline">\(\alpha\)</span>. Thus, <strong>they treat the problem of constructing a hypothesis test as a 0/1 knapsack problem</strong>, completely analogous to the thief’s problem described above, as shown in this table.</p>
+<table class="table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Literal Knapsack Problem</th>
+<th>Hypothesis Test Construction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Putting item into knapsack</td>
+<td>Putting element of <span class="math inline">\(S\)</span> into rejection region <span class="math inline">\(R\)</span></td>
+</tr>
+<tr class="even">
+<td>Total value</td>
+<td>Power (sum of <span class="math inline">\(\Pr(s;H_a)\)</span> over elements of <span class="math inline">\(S\)</span> in <span class="math inline">\(R\)</span>)</td>
+</tr>
+<tr class="odd">
+<td>Total weight</td>
+<td>Type I error rate (sum of <span class="math inline">\(\Pr(s;H_0)\)</span> over elements of <span class="math inline">\(S\)</span> in <span class="math inline">\(R\)</span>)</td>
+</tr>
+<tr class="even">
+<td>Maximizing total value subject to maximum total weight</td>
+<td>Maximizing power subject to maximum Type I error rate</td>
+</tr>
+</tbody>
+</table>
+<p>Consider the example shown in the table below. <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2\)</span>, and <span class="math inline">\(s_3\)</span> are elements of a sample space <span class="math inline">\(S\)</span>. They could be, for instance, the event that a three-sided die produces a 1, 2, or 3, respectively. <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_a\)</span> would then be hypotheses about the biases of the die.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><span class="math inline">\(s_1\)</span></th>
+<th><span class="math inline">\(s_2\)</span></th>
+<th><span class="math inline">\(s_3\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\Pr(s;H_a)\)</span></td>
+<td>0.04</td>
+<td>0.05</td>
+<td>0.91</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Pr(s;H_0)\)</span></td>
+<td>0.01</td>
+<td>0.05</td>
+<td>0.94</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Pr(s;H_a)/\Pr(s;H_0)\)</span></td>
+<td>4</td>
+<td>1</td>
+<td>0.97</td>
+</tr>
+</tbody>
+</table>
+<p>I said above that putting objects into the knapsack in descending order by value/weight ratio, stopping when the next item would cause the total weight to exceed the limit, yields a set of items that has the largest value among all sets with no more than its total weight. Analogously, <strong>putting elements of the sample space into the rejection region in order by descending likelihood ratio, stopping when the next item would cause the Type I error rate to exceed <span class="math inline">\(\alpha\)</span>, yields a rejection region that has the greatest power among all possible rejection regions with no more than its Type I error rate.</strong> (This result is known as the Neyman-Pearson lemma.) Just as that approach in the thief’s case may not yield the greatest possible value consistent with the cap on the total weight, so too in the hypothesis testing case <strong>it may not yield the greatest possible power consistent with the Type I error rate being no greater than <span class="math inline">\(\alpha\)</span>.</strong> For instance, in the example shown above, it would lead one to perform a test that has power <span class="math inline">\(.04\)</span> when <span class="math inline">\(0.05\leq \alpha &lt; .06\)</span> (with <span class="math inline">\(R=\{s_1\}\)</span>) even though a test with power <span class="math inline">\(.05\)</span> and Type I error rate less than <span class="math inline">\(\alpha\)</span> is available (with <span class="math inline">\(R=\{s_2\}\)</span>).</p>
+<p><strong>There are two ways to turn the 0/1 knapsack problem of constructing a best Neyman-Pearson hypothesis test into a continuous knapsack problem.</strong> First, one can consider cases with continuous, strictly positive probability distributions over continuous sample spaces. Here, the optimal solution is to add elements of the hypothesis space to the rejection region in descending order by likelihood ratio until the Type I error rate reaches <span class="math inline">\(\alpha\)</span>. Second, one can allow <em>randomized</em> tests that reject the null hypothesis with some non-extremal probability on some elements of the sample space. Here, the optimal solution is to add elements of the sample space to the rejection region in descending order by likelihood ratio until we get to the first element that would cause the Type I error rate to exceed <span class="math inline">\(\alpha\)</span> if we were to add it to <span class="math inline">\(R\)</span>. We then prescribe consulting some auxiliary randomizer to decide to reject the null hypothesis if that result is observed, in such a way that the Type I error rate of the test is exactly <span class="math inline">\(\alpha\)</span>. This procedure is analogous to having the thief taking a portion of the item with the largest value/weight ratio that will not wholly fit in the bag, choosing the size of the portion so that the total weight is exactly the maximum weight.</p>
+<p>Randomized tests are often discussed in presentations of the Neyman-Pearson framework because they make certain results easier to state. However, they are generally rejected in practice. They violate the plausible principle that the output of a hypothesis test should depend only on aspects of the data that are evidentially relevant to the hypotheses in question. One could take the hardline view suggested by Neyman and Pearson’s own writings that this principle is false because only long-run error rates matter. However, few methodologists take this view so seriously that they are willing to countenance randomized tests.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</section>
+<section id="is-this-approach-sensible" class="level2">
+<h2 class="anchored" data-anchor-id="is-this-approach-sensible">Is This Approach Sensible?</h2>
+<p><strong>The Neyman-Pearson approach of treating hypothesis test construction as a knapsack problem has some odd consequences.</strong> For instance, in the example above, the optimal solution for <span class="math inline">\(.05\leq \alpha &lt; .06\)</span> rejects <span class="math inline">\(H_0\)</span> if and only if <span class="math inline">\(s_2\)</span> is observed. But <span class="math inline">\(s_2\)</span> has the same probability (<span class="math inline">\(.05\)</span>) under <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_a\)</span>, whereas <span class="math inline">\(s_1\)</span> is four times more probable under <span class="math inline">\(H_a\)</span> than under <span class="math inline">\(H_0\)</span>. If one accepts the Law of Likelihood, which says that <span class="math inline">\(s\)</span> favors <span class="math inline">\(H_a\)</span> over <span class="math inline">\(H_0\)</span> if and only if <span class="math inline">\(\Pr(s;H_a)/\Pr(s;H_0)&gt;1\)</span>, then it follows that <span class="math inline">\(s_1\)</span> favors <span class="math inline">\(H_a\)</span> over <span class="math inline">\(H_0\)</span> while <span class="math inline">\(s_2\)</span> is neutral between them. Even if the Law of Likelihood is not acceptable in full generality, it seems to give a sensible verdict in this case. One might think, then, that <span class="math inline">\(s_2\)</span> should not appear in <span class="math inline">\(R\)</span> without <span class="math inline">\(s_1\)</span>.</p>
+<p><strong>Pearson provides a solution to this problem in later papers.</strong> In his (<a href="https://www.researchgate.net/publication/42305858_The_choice_of_statistical_tests_illustrated_on_the_interpretation_on_data_classes_in_a_2X2_table">1947</a>, 173), for instance, he prescribes a three-step process for specifying tests:</p>
+<blockquote class="blockquote">
+<p>Step 1. We must specify the [sample space].</p>
+<p>Step 2. We then divide this set by a system of ordered boundaries or contours such that as we pass across one boundary and proceed to the next, we come to a class of results which makes us more and more inclined, on the information available, to reject the hypothesis tested in favour of alternatives which differ from it by increasing amounts.</p>
+<p>Step 3. We then, if possible, associate with each contour level [a Type I error rate].</p>
+</blockquote>
+<p>The key point here is that <strong>Pearson prescribes ordering results according to the degree to which they would incline one to reject <span class="math inline">\(H_0\)</span> and only considering tests that reject <span class="math inline">\(H_0\)</span> on result <span class="math inline">\(s\)</span> but not result <span class="math inline">\(s'\)</span> if <span class="math inline">\(s\)</span> makes one more inclined to reject <span class="math inline">\(H_0\)</span> than <span class="math inline">\(s'\)</span>.</strong> If the ordering of one’s inclinations to reject <span class="math inline">\(H_0\)</span> on the basis of possible observations conforms to the likelihood ratios of those observations, then on this approach one will not consider problematic tests like the one that rejects on <span class="math inline">\(s_2\)</span> but not <span class="math inline">\(s_1\)</span> in our example. This approach is analogous to the thief always taking items in descending order by value/weight ratio, stopping when the next item will not fit. <strong>Here we see a point of disanalogy between hypothesis test construction and literal knapsack problems:</strong> because the outcomes of hypothesis tests are (at least <em>de facto</em>) interpreted in evidential terms, it seems inappropriate to add elements of the sample space to <span class="math inline">\(S\)</span> “out of order” relative to their likelihood ratios, even if doing so allows one to get greater power while keep the Type I error rate below <span class="math inline">\(\alpha\)</span>. By contrast, it is not problematic to add items to the thief’s knapsack “out of order” relative to their value/weight ratios if doing so allows one to get a higher total value while keeping the maximum weight below the maximum.</p>
+<p><strong>A second point of disanalogy between a literal knapsack problem and the problem of constructing a hypothesis test concerns the appropriate way to trade off value against weight, or power against Type I error rate.</strong> We can arrange so that it is only a slight idealization to suppose that the thief does not care how heavy her bag is as long as she can carry it away. (We can assume that she has a strong back and a getaway vehicle nearby, does not have to worry about how much noise she makes, and so on.) We cannot arrange so that a scientist does not care about the Type I error rate of his or her test as long as it is below a particular threshold, at least if we impose the normative assumption that the scientist’s goal is to advance knowledge and not just, say, to get his or her paper past journal referees.</p>
+<p><strong>Rather than maximizing power subject to a maximum Type I error rate, it would seem to make more sense to minimize a weighted sum of the Type I and Type II error rates,</strong> where the Type II error rate is the probability of failing to reject the null hypothesis if it is false (1-power) and the weights reflect the importance of avoiding Type I and Type II errors. Like Pearson’s approach if one’s inclinations to reject <span class="math inline">\(H_0\)</span> conform to likelihood ratios, this approach would lead one to reject <span class="math inline">\(H_0\)</span> for <span class="math inline">\(H_a\)</span> if and only if the likelihood ratio <span class="math inline">\(\Pr(s;H_a)/\Pr(s;H_0)\)</span> exceeds some threshold <span class="math inline">\(k\)</span>. In this case, <span class="math inline">\(k\)</span> is simply the weight one associates with the Type I error rate divided by the weight one associates with the Type II error rate. <strong>The only difference between this approach and Pearson’s is that this approach involves fixing relative weights on the Type I error rate and power and letting the likelihood ratio cutoff for rejection and the Type I error rate fall where they may,</strong> whereas Pearson’s involves putting a cap on the Type I error rate and letting the likelihood ratio cutoff and (implied) relative weights on the Type I error rate and power fall where they may.</p>
+<p>One might object that weights on the Type I and Type II error rates are too subjective or arbitrary for use in science. However, they do not seem to be any more subjective or arbitrary than the maximum tolerated Type I error rate <span class="math inline">\(\alpha\)</span>. There is a typical convention of setting <span class="math inline">\(\alpha=.05\)</span>, but that convention is itself rather arbitrary. Moreover, we could establish the analogous convention of setting <span class="math inline">\(k=20\)</span>, which has the effect of guaranteeing that the Type I error rate is no greater than the standard .05 (<a href="http://www.tandfonline.com/doi/abs/10.1080/01621459.2000.10474264">Royall 2000</a>).</p>
+<p><strong>To my mind, this alternative to Pearson’s approach seems more sensible.</strong> Constructing a hypothesis test is more like filling a knapsack for a long journey than for a quick getaway: every increase in weight (Type I error rate) matters and needs to be compensated by a sufficient increase in value (power).</p>
+<p>The main problem for this approach is that it does not generalize well to cases involving composite hypotheses (e.g., that a particular parameter is in a specified range or is not equal to a specific value), which are the usual cases in science. In those cases one or both of <span class="math inline">\(\Pr(s;H_0)\)</span> and <span class="math inline">\(\Pr(s;H_a)\)</span> lack definite values, and many methodologists are reluctant to appeal to the corresponding conditional probabilities <span class="math inline">\(\Pr(s|H_0)\)</span> and <span class="math inline">\(\Pr(s|H_a)\)</span> because they lack generally accepted objective values.</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>This example comes from Lecture 8 of the edX course <a href="https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-2">MITx 6.00.2x</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Lehmann is perhaps the most prominent contemporary methodologists who takes randomized tests seriously; see <a href="https://books.google.com/books/about/Testing_Statistical_Hypotheses.html?id=K6t5qn-SEp8C">Lehmann and Romano 2005</a>, Ch. 15<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
