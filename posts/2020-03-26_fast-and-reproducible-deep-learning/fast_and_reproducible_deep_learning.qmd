@@ -1,0 +1,56 @@
+---
+title: "Fast and Reproducible Deep Learning"
+author: "Greg Gandenberger"
+date: "2020-03-26"
+categories: [deep learning, ml, computer vision, wildebeest, oss]
+image: "wildebeest.webp"
+description: "Best practices for managing deep learning projects, including tools for processing large datasets, managing dependencies, and tracking experiments."
+---
+
+![Our team's open-source [Wildebeest](https://github.com/gsganden/wildebeest) library is one tool for managing deep learning projects — it makes processing large datasets fast and easy. Photo Credit: [Gopal Vijayaraghavan](https://www.flickr.com/people/t3rmin4t0r/) [cc](https://creativecommons.org/licenses/by/2.0/)](wildebeest.webp)
+
+There are endless resources for someone who wants to learn to train a deep learning model, but running a successful deep learning project requires managing many additional moving parts that are much less discussed. This talk contributes to filling that gap in our deep learning education resources.
+
+Thanks to the [Chicago ML Meetup](https://www.meetup.com/Chicago-ML/) for hosting.
+
+::: {.callout-note}
+**Note:** The presentation refers to the "Creevey" library. That library has been renamed "Wildebeest." It also mentions "Tonks", which has been renamed "Octopod." Our team previously had a tradition of naming projects with terms or characters from the Harry Potter series, but we renamed them in response to J.K. Rowling's persistent transphobic comments.
+:::
+
+## Video
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    src="https://www.youtube.com/embed/fgSOIbu_kxY" 
+    title="Fast and Reproducible Deep Learning"
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+## Slides
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    src="https://docs.google.com/presentation/d/1onvl0krK4GzSHehcHl6eyjVzTBP3iKGzGal-r-bQtUU/embed?start=false&loop=false&delayms=3000"
+    frameborder="0" 
+    allowfullscreen="true" 
+    mozallowfullscreen="true" 
+    webkitallowfullscreen="true">
+  </iframe>
+</div>
+
+## Abstract
+
+Deep learning projects require managing large datasets, heavy-duty dependencies, complex experiments, and large amounts of code. This talk provides best practices for accomplishing these tasks efficiently and reproducibly. Tools that are covered include:
+
+- The [Wildebeest library](https://github.com/gsganden/wildebeest) for processing large collections of files
+- [pip-tools](https://pip.pypa.io/en/stable/installation/) and [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) for managing dependencies
+- [MLflow Tracking](https://mlflow.org/docs/latest/tracking.html) for tracking experiments
+
+## Additional Resources
+
+[Autofocus](https://github.com/uptake/autofocus) is a deep learning project that labels animals in images taken by motion-activated "camera traps." It illustrates many of the ideas discussed in the talk. 
