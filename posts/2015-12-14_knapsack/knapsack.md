@@ -1,8 +1,11 @@
 ---
 title: "Hypothesis Test Construction as a Knapsack Problem"
 date: "2015-12-14"
-categories: [statistics, philosophy]
+categories: [stats, philosophy]
+image: "knapsack.jpg"
 ---
+
+![Photo Credit: [M J M](https://www.flickr.com/photos/98908208@N00/168997122/) via [Compfight](https://www.vecteezy.com/free-photos?utm_source=compfight&utm_medium=referral&utm_campaign=redirect) [cc](https://creativecommons.org/licenses/by-nc-nd/2.0/)](knapsack.jpg)
 
 Neyman and Pearson (e.g. [1933](https://www.jstor.org/stable/91247?seq=1#page_scan_tab_contents)) treat the problem of choosing the best rejection region for a simple-vs.-simple hypothesis test as what computer scientists call a 0/1 knapsack problem. **Standard examples of 0/1 knapsack problems are easier to grasp than hypothesis testing problems, so thinking about Neyman-Pearson test construction on analogy with those examples is helpful for developing intuitions. It is also illuminating to think about points of disanalogy between those scenarios and hypothesis testing scenarios, which give rise to possible objections to the Neyman-Pearson approach.**
 

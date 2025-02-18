@@ -13,7 +13,22 @@ about:
     - icon: github
       text: Github
       href: https://github.com/gsganden
-
 ---
 
-Machine learning engineer posting as I learn about AI engineering. Previously at Cruise, Argo AI, ShopRunner, General Assembly, and Uptake. Public projects include the file-processing framework [Wildebeest](https://wildebeest-library.readthedocs.io/en/latest/), visualization library [Model Inspector](https://gsganden.github.io/model_inspector), and camera trap animal classification service [Autofocus](https://github.com/uptake/autofocus).
+I am a machine learning engineer.
+
+Public projects:
+
+- [Wildebeest](https://wildebeest-library.readthedocs.io/en/latest/) (Python file processing framework)
+- [Model Inspector](https://gsganden.github.io/model_inspector) (machine learning visualization library)
+- [Autofocus](https://github.com/uptake/autofocus) (camera trap animal classification application)
+
+Previous employers:
+
+- [Cruise](https://www.getcruise.com/) (autonomous vehicles)
+- Argo AI (autonomous vehicles)
+- [ShopRunner](https://www.shoprunner.com/) (ecommerce)
+- [General Assembly](https://generalassemb.ly/) (tech education)
+- Uptake (industrial analytics)
+
+In a previous life I received a Ph.D. in History and Philosophy of Science and an MA in Statistics, both from the University of Pittsburgh. My academic research addressed questions about the proper use of statistical methods, such as [what to do with the results of an experiment that ends earlier than planned](https://arxiv.org/abs/1707.00214).

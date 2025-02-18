@@ -1,1 +1,29 @@
 /* css styles */
+
+.content {
+    text-align: left;
+}
+
+.about-entity {
+    text-align: left;
+}
+
+.quarto-about-jolla {
+    text-align: left;
+}
+
+.about-contents {
+    text-align: left;
+}
+
+div.quarto-about-jolla p {
+    text-align: left;
+}
+
+div.quarto-about-jolla ul {
+    text-align: left;
+}
+
+div.quarto-about-jolla li {
+    text-align: left;
+}
