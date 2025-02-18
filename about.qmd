@@ -16,4 +16,4 @@ about:
 
 ---
 
-Machine learning engineer posting as I learn about AI engineering. Previously at Cruise, Argo AI, ShopRunner, General Assembly, and Uptake. Public projects include the file-processing framework [Wildebeest](https://wildebeest-library.readthedocs.io/en/latest/), visualization library [Model Inspector](https://gsganden.github.io/model_inspector/inspect.html), and camera trap animal classification service [Autofocus](https://github.com/uptake/autofocus).
+Machine learning engineer posting as I learn about AI engineering. Previously at Cruise, Argo AI, ShopRunner, General Assembly, and Uptake. Public projects include the file-processing framework [Wildebeest](https://wildebeest-library.readthedocs.io/en/latest/), visualization library [Model Inspector](https://gsganden.github.io/model_inspector), and camera trap animal classification service [Autofocus](https://github.com/uptake/autofocus).
