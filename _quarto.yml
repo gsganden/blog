@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "blog"
+  title: "Greg Gandenberger's Blog"
   navbar:
     right:
       - about.qmd
@@ -17,6 +17,7 @@ format:
     css: styles.css
 execute:
   freeze: auto
-
+resources:
+  - CNAME
 
 
