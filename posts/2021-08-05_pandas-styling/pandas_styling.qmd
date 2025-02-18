@@ -1,0 +1,13 @@
+---
+title: "Problem Solved: Custom Pandas styling not rendering when reopening notebook"
+date: "2021-08-05"
+categories: [ml, jupyter, pandas]
+image: "correlation_matrix.png"
+description: "Quick fix for Pandas styling not showing up when reopening Jupyter notebooks - use jupyter trust command to enable custom styling rendering."
+---
+
+Pandas has a variety of methods for [styling notebooks](https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html). I have been using those methods in the [model_inspector](https://gsganden.github.io/model_inspector) library to display [correlation matrices](https://gsganden.github.io/model_inspector/explore.html#show_correlation) and [confusion matrices](https://gsganden.github.io/model_inspector/tune.html#confusion_matrix) in Jupyter notebooks with appropriate highlighting.
+
+![A correlation matrix rendered with appropriate coloring using [Pandas styling methods](https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html) in the [model_inspector](https://gsganden.github.io/model_inspector) library. Note that it uses a diverging colormap so that positive values are red and negative values are blue. I often see sequential colormaps used here, which make it hard to distinguish between positive, negative, and near-zero values.](correlation_matrix.png)
+
+I recently encountered a problem with this approach: DataFrames were not rendering with custom styling when I reopened a notebook after saving it. After an hour or two of fruitless Googling, I figured out why: the notebook was not trusted, so Jupyter was not running the code to do the custom rendering when I reopened it. Running the Terminal command `jupyter trust my_notebook.ipynb` fixed the problem. 
