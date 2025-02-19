@@ -1,7 +1,7 @@
 ---
 title: "TIL: An LLM Foundry Metric Must Have \"Accuracy\" in Its Name"
 author: "Greg Gandenberger"
-date: 2025-02-18
+date: 2025-02-19
 categories: [ml, llms, evals, llm-foundry]
 ---
 
