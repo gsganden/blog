@@ -11,6 +11,10 @@ website:
         href: https://github.com/
       - icon: twitter
         href: https://twitter.com
+  twitter-card: true
+  open-graph: true
+  site-url: "https://gandenberger.org"
+  image: "profile.jpg"
 format:
   html:
     theme: cosmo
