@@ -1,5 +1,5 @@
 ---
-title: "TIL: How LLM Foundry Evaluates Math Performance"
+title: "TIL: How LLM Foundry Evaluates Performance On Open-Ended Math Problems"
 author: "Greg Gandenberger"
 date: 2025-02-18
 categories: [ml, llms, evals, math-verify, llm-foundry]
@@ -15,7 +15,7 @@ I am contributing to a research project on [performance-efficient fine tuning of
 
 # Problem
 
-**Evaluating LLM performance on math problems is difficult because LLMs can generate arbitrary text.** Checking an LLM's answer to a math problem against ground truth requires extracting its answer from the generated text and then accounting for issues such as rounding (e.g. 0.33 vs. 0.333) and alternative representations (e.g. 0.33 vs. 1/3). HuggingFace recently released the [Math-Verify library](https://github.com/huggingface/math-verify) to address these issues and [showed that it makes a massive difference](https://huggingface.co/blog/math_verify_leaderboard) to LLM math leaderboards.
+**Evaluating LLM performance on open-ended math problems is difficult because LLMs can generate arbitrary text.** Checking an LLM's answer to an open-ended (as opposed to multiple-choice, for instance) math problem against ground truth requires extracting its answer from the generated text and then accounting for issues such as rounding (e.g. 0.33 vs. 0.333) and alternative representations (e.g. 0.33 vs. 1/3). HuggingFace recently released the [Math-Verify library](https://github.com/huggingface/math-verify) to address these issues and [showed that it makes a massive difference](https://huggingface.co/blog/math_verify_leaderboard) to LLM math leaderboards.
 
 In the meantime, we have been using [LLM Foundry](https://github.com/mosaicml/llm-foundry) for model development. **LLM Foundry has its own procedure for evaluating LLM math performance. By default, it simply [checks whether LLM's output starts with an exact match to one of a set of provided answers](https://github.com/mosaicml/llm-foundry/blob/e03b23d9342471a2464a6500c509bd657381d32c/llmfoundry/eval/metrics/nlp.py#L198-L201)** after [some light post-processing](https://github.com/mosaicml/llm-foundry/blob/e03b23d9342471a2464a6500c509bd657381d32c/llmfoundry/eval/metrics/nlp.py#L133) to "lower text and remove punctuation, articles and extra whitespace".
 
@@ -48,4 +48,4 @@ In another case, the model gives the right answer, but the evaluation procedure 
 
 # Next Steps
 
-We should be able to do better. LLM Foundry supports specifing a "metric" to use to evaluate the model's performance. The [default](https://github.com/mosaicml/llm-foundry/blob/e03b23d9342471a2464a6500c509bd657381d32c/llmfoundry/utils/builders.py#L587-L590) metric for "generation_task_with_answers" is [`InContextLearningGenerationExactMatchAccuracy`](https://github.com/mosaicml/llm-foundry/blob/e03b23d9342471a2464a6500c509bd657381d32c/llmfoundry/eval/metrics/nlp.py#L92). We could define a custom metric that uses `Math-Verify` to extract the LLM's answer and compare it to ground truth more accurately.
+We should be able to do better. LLM Foundry supports specifing a "metric" to use to evaluate the model's performance. The [default](https://github.com/mosaicml/llm-foundry/blob/e03b23d9342471a2464a6500c509bd657381d32c/llmfoundry/utils/builders.py#L587-L590) metric for "generation_task_with_answers" (which is at least how [scripts/eval/yamls/tasks_v0.3.yaml](https://github.com/mosaicml/llm-foundry/blob/e03b23d9342471a2464a6500c509bd657381d32c/scripts/eval/yamls/tasks_v0.3.yaml#L6) treats GSM8K) is [`InContextLearningGenerationExactMatchAccuracy`](https://github.com/mosaicml/llm-foundry/blob/e03b23d9342471a2464a6500c509bd657381d32c/llmfoundry/eval/metrics/nlp.py#L92). We could define a custom metric that uses `Math-Verify` to extract the LLM's answer and compare it to ground truth more accurately.
