@@ -14,7 +14,7 @@ website:
   twitter-card: true
   open-graph: true
   site-url: "https://gandenberger.org"
-  image: "profile.jpg"
+  image: "https://gandenberger.org/profile.jpg"
 format:
   html:
     theme: cosmo
