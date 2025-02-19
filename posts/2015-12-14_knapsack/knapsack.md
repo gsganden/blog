@@ -1,5 +1,6 @@
 ---
 title: "Hypothesis Test Construction as a Knapsack Problem"
+author: "Greg Gandenberger"
 date: "2015-12-14"
 categories: [stats, philosophy]
 image: "knapsack.jpg"

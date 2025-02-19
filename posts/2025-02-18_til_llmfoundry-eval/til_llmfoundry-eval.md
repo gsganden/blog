@@ -1,5 +1,6 @@
 ---
 title: "TIL: How LLM Foundry Evaluates Math Performance"
+author: "Greg Gandenberger"
 date: 2025-02-18
 categories: [ml, llms, evals, math-verify, llm-foundry]
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Python Dictionaries Are Now Ordered. Keep Using OrderedDict."
+author: "Greg Gandenberger"
 date: "2018-03-10"
 categories: [python, pandas]
 image: "dict_ordering.png"
@@ -126,7 +127,7 @@ z y x w v u t s r q ... j i h g f e d c b a
 [1 rows x 26 columns]
 ```
 
-(The relevant bit of `pandas` code is in the `DataFrame` class’s [`_init_dict` method](https://github.com/pandas-dev/pandas/blob/master/pandas/core/frame.py).)
+(The relevant bit of `pandas` code is in the `DataFrame` class's [`_init_dict` method](https://github.com/pandas-dev/pandas/blob/master/pandas/core/frame.py).)
 
 ## How Adding Guarantees Can Be Dangerous
 
