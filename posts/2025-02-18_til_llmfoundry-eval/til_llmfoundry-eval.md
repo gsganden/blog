@@ -11,7 +11,7 @@ This is a [TIL](https://dev.to/jbranchaud/how-i-built-a-learning-machine-45k9) (
 
 # Context
 
-I am contributing to a research project on [performance-efficient fine tuning of LLMs](posts/2025-02-14_fine-tuning-on-regression-task/fine_tuning_on_regression_tasks.html). That project involves fine tuning LLMs on math problems.
+I am contributing to a research project on [performance-efficient fine tuning of LLMs](/posts/2025-02-14_fine-tuning-on-regression-task/fine_tuning_on_regression_tasks.ipynb). That project involves fine tuning LLMs on math problems.
 
 # Problem
 
