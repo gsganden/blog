@@ -1,0 +1,11 @@
+[project]
+name = "2025-02-20_til_math-verify"
+version = "0.1.0"
+description = "Getting Started with Math-Verify"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "jupyterlab",
+    "math-verify",
+    "pandas",
+]
