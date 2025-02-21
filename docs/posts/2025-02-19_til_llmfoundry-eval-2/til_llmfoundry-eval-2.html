@@ -166,7 +166,7 @@ Note
 <p>This is a <a href="https://dev.to/jbranchaud/how-i-built-a-learning-machine-45k9">TIL</a> (“Today I Learned”) post. I expect it to be useful to my future self and maybe to others, but it is meant to be a quick, informal way to capture something I learned rather than a polished presentation.</p>
 </div>
 </div>
-<p>My <a href="../../posts/2025-02-18_til_llmfoundry-eval/">last post</a> described limitations of LLM Foundry’s default evaluation procedure for open-ended math problems and suggested that we could do better by creating a custom metric that uses <code>Math-Verify</code>.</p>
+<p>My <a href="../../posts/2025-02-18_til_llmfoundry-eval/til_llmfoundry-eval.html">last post</a> described limitations of LLM Foundry’s default evaluation procedure for open-ended math problems and suggested that we could do better by creating a custom metric that uses <code>Math-Verify</code>.</p>
 <p>I encountered a “gotcha” in the process of creating that custom metric: the metric must have “Accuracy” in its name. Otherwise LLM Foundry’s evaluation script <a href="https://github.com/mosaicml/llm-foundry/blob/08702d2a99da1548deac45e26dbf1b34438fe1d4/llmfoundry/command_utils/eval.py#L413-L414">skips it</a>!</p>
 <p>I created <a href="https://github.com/mosaicml/llm-foundry/issues/1722">this GitHub issue</a> to track this problem. I hope that we can eliminate this behavior, or at least make it more obvious.</p>
 
