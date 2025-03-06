@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2025-03-05_llm-math-evaluation-best-practices/index.html",
       "/posts/2025-02-22_til_math-verify-2/til_math-verify-2.html",
       "/posts/2025-02-20_til_math-verify/til_math-verify.html",
       "/posts/2025-02-19_til_llmfoundry-eval-2/til_llmfoundry-eval-2.html",
@@ -21,6 +22,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/2025-03-05_llm-math-evaluation-best-practices/index.html",
       "/posts/2021-08-05_pandas-styling/pandas_styling.html",
       "/posts/2020-07-30_introducing-wildebeest/introducing_wildebeest.html",
       "/posts/2020-03-26_fast-and-reproducible-deep-learning/fast_and_reproducible_deep_learning.html"
