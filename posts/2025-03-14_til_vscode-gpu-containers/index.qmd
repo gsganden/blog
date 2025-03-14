@@ -1,0 +1,35 @@
+---
+title: "TIL: Dev Containers and GPUs: A Match Made in Purgatory"
+author: "Greg Gandenberger"
+date: 2025-03-14
+categories: [til, vscode, docker, gpu, cuda]
+---
+
+::: {.callout-note}
+This is a [TIL](https://dev.to/jbranchaud/how-i-built-a-learning-machine-45k9) ("Today I Learned") post. I expect it to be useful to my future self and maybe to others, but it is meant to be a quick, informal way to capture something I learned rather than a polished presentation.
+:::
+
+## GPU Installation Challenges
+
+**Setting up GPU support for deep learning is challenging.** You need:
+
+1. The right NVIDIA drivers for your GPU
+2. A compatible CUDA toolkit version
+3. Proper environment configuration (CUDA_HOME, LD_LIBRARY_PATH, etc.)
+4. GPU-enabled versions of your deep learning frameworks
+
+These requirements often lead to compatibility issues, version conflicts, and system-wide changes that can affect other projects.
+
+## The Dev Containers Promise
+
+**Docker solves many dependency management issues** by encapsulating even many system-level dependencies in a container. **However, developing with Docker can be challenging.** If an IDE is connected to a virtual environment on the host machine while the code is running inside a container, then mismatches between those environments can make the IDE less helpful.
+
+**VSCode dev containers promise to solve this issue** by connecting the IDE to the Docker container environment. I had hoped that they would thus provide an easy solution for developing deep learning projects on GPUs with minimal environment setup.
+
+## Why Dev Containers Are Not a Full Solution
+
+**Alas, Docker does not encapsulate everything that is necessary to work with the GPU hardware:** accessing GPUs from inside a Docker container requires installing NVIDIA drivers as well as the NVIDIA Container Toolkit on the host machine.
+   
+## How to Use Dev Containers with an NVIDIA GPU
+
+**Despite this limitation, dev containers are still useful.** They can encapsulate most dependencies, include the CUDA toolkit and any Python library dependencies, as well as a VSCode configuration. See [this PR](https://github.com/warner-benjamin/transformer-from-scratch/pull/1) for an example of how to set one up for a GPU-enabled deep learning project.
