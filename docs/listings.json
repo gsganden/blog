@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2025-03-27_til_how-max-run-duration-affects-loss-curve/index.html",
       "/posts/2025-03-14_til_vscode-gpu-containers/index.html",
       "/posts/2025-03-05_llm-math-evaluation-best-practices/index.html",
       "/posts/2025-02-22_til_math-verify-2/til_math-verify-2.html",
@@ -23,6 +24,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/2025-03-27_til_how-max-run-duration-affects-loss-curve/index.html",
       "/posts/2025-03-14_til_vscode-gpu-containers/index.html",
       "/posts/2025-03-05_llm-math-evaluation-best-practices/index.html",
       "/posts/2021-08-05_pandas-styling/pandas_styling.html",
