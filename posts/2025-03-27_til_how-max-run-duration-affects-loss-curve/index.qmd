@@ -6,6 +6,10 @@ categories: [til, ml, training, debugging]
 image: "images/two_loss_curves.png"
 ---
 
+::: {.callout-note}
+This is a [TIL](https://dev.to/jbranchaud/how-i-built-a-learning-machine-45k9) ("Today I Learned") post. I expect it to be useful to my future self and maybe to others, but it is meant to be a quick, informal way to capture something I learned rather than a polished presentation.
+:::
+
 # The Puzzle
 
 Today I encountered a puzzling phenomenon: my model's loss curve appeared to be bimodal. I was working to eliminate sources of randomness in order to reproduce another interesting finding, and I saw that the loss usually followed one curve, but sometimes followed a second curve, and always followed one of the two:
