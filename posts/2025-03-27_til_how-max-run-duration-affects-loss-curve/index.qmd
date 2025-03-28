@@ -1,5 +1,5 @@
 ---
-title: "Why Did My Loss Curve Change With Run Duration?"
+title: "TIL: Why Did My Loss Curve Change With Run Duration?"
 author: "Greg Gandenberger"
 date: 2025-03-27
 categories: [til, ml, training, debugging]

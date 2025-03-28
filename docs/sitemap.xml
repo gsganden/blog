@@ -2,82 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gandenberger.org/posts/2025-03-05_llm-math-evaluation-best-practices/index.html</loc>
-    <lastmod>2025-03-28T02:25:56.977Z</lastmod>
+    <lastmod>2025-03-28T02:26:21.092Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2015-12-14_knapsack/knapsack.html</loc>
-    <lastmod>2025-03-28T02:25:57.485Z</lastmod>
+    <lastmod>2025-03-28T02:26:21.608Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-02-22_til_math-verify-2/til_math-verify-2.html</loc>
-    <lastmod>2025-03-28T02:25:57.891Z</lastmod>
+    <lastmod>2025-03-28T02:26:22.016Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-02-19_til_llmfoundry-eval-2/til_llmfoundry-eval-2.html</loc>
-    <lastmod>2025-03-28T02:25:58.233Z</lastmod>
+    <lastmod>2025-03-28T02:26:22.399Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-03-27_til_how-max-run-duration-affects-loss-curve/index.html</loc>
-    <lastmod>2025-03-28T02:25:58.587Z</lastmod>
+    <lastmod>2025-03-28T02:26:22.767Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-03-14_til_vscode-gpu-containers/index.html</loc>
-    <lastmod>2025-03-28T02:25:58.926Z</lastmod>
+    <lastmod>2025-03-28T02:26:23.122Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2019-12-02_evaluating-classifiers-pt4/evaluating_classifiers_pt4.html</loc>
-    <lastmod>2025-03-28T02:25:59.422Z</lastmod>
+    <lastmod>2025-03-28T02:26:23.604Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2019-11-26_evaluating-classifiers-pt3/evaluating_classifiers_pt_3.html</loc>
-    <lastmod>2025-03-28T02:25:59.982Z</lastmod>
+    <lastmod>2025-03-28T02:26:24.159Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2021-08-05_pandas-styling/pandas_styling.html</loc>
-    <lastmod>2025-03-28T02:26:00.366Z</lastmod>
+    <lastmod>2025-03-28T02:26:24.512Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2018-03-10_ordered-dicts/ordered_dicts.html</loc>
-    <lastmod>2025-03-28T02:26:00.772Z</lastmod>
+    <lastmod>2025-03-28T02:26:24.916Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-02-18_til_llmfoundry-eval/til_llmfoundry-eval.html</loc>
-    <lastmod>2025-03-28T02:26:01.159Z</lastmod>
+    <lastmod>2025-03-28T02:26:25.277Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2019-11-20_evaluating-classifiers-pt2/evaluating_classifiers_pt_2.html</loc>
-    <lastmod>2025-03-28T02:26:01.625Z</lastmod>
+    <lastmod>2025-03-28T02:26:25.672Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-02-20_til_math-verify/til_math-verify.html</loc>
-    <lastmod>2025-03-28T02:26:02.199Z</lastmod>
+    <lastmod>2025-03-28T02:26:26.190Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2020-07-30_introducing-wildebeest/introducing_wildebeest.html</loc>
-    <lastmod>2025-03-28T02:26:02.588Z</lastmod>
+    <lastmod>2025-03-28T02:26:26.577Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2019-11-14_evaluating-classifier-pt1/evaluating_classifiers_pt_1.html</loc>
-    <lastmod>2025-03-28T02:26:03.053Z</lastmod>
+    <lastmod>2025-03-28T02:26:27.042Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-02-14_fine-tuning-on-regression-task/fine_tuning_on_regression_tasks.html</loc>
-    <lastmod>2025-03-28T02:26:03.863Z</lastmod>
+    <lastmod>2025-03-28T02:26:27.870Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2020-03-26_fast-and-reproducible-deep-learning/fast_and_reproducible_deep_learning.html</loc>
-    <lastmod>2025-03-28T02:26:04.222Z</lastmod>
+    <lastmod>2025-03-28T02:26:28.225Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/index.html</loc>
-    <lastmod>2025-03-28T02:26:04.740Z</lastmod>
+    <lastmod>2025-03-28T02:26:28.739Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/about.html</loc>
-    <lastmod>2025-03-28T02:26:05.068Z</lastmod>
+    <lastmod>2025-03-28T02:26:29.086Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/blog.html</loc>
-    <lastmod>2025-03-28T02:26:05.475Z</lastmod>
+    <lastmod>2025-03-28T02:26:29.490Z</lastmod>
   </url>
 </urlset>
