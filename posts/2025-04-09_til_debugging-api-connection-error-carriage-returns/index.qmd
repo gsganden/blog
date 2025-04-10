@@ -1,0 +1,40 @@
+---
+title: "TIL: Debugging an API Connection Error Caused by Invisible Carriage Returns"
+author: "Greg Gandenberger"
+date: 2025-04-09
+categories: [til, debugging, python, llms]
+---
+
+::: {.callout-note}
+This is a [TIL](https://dev.to/jbranchaud/how-i-built-a-learning-machine-45k9) ("Today I Learned") post. I expect it to be useful to my future self and maybe to others, but it is meant to be a quick, informal way to capture something I learned rather than a polished presentation.
+:::
+
+I encountered an error when running Python scripts that used `llama_index` to interact with LLM provider APIs:
+
+```
+httpcore.LocalProtocolError: Illegal header value b'Bearer <REDACTED KEY>\r'
+```
+
+The `\r` at the end of the header value was the problem. That character originated from an example `.env` file that I was copying and modifying. It contained carriage return (`\r`) characters at the end of each line, likely due to being created or edited on a Windows system and then used in a Linux environment that expects line feeds (`\n`).
+
+These characters were invisible in standard editors but could be revealed using `cat -vET`:
+
+```bash
+$ cat -vET .env.example
+export OPENAI_API_KEY='YOUR_OPENAI_KEY_HERE'^M$
+export GOOGLE_API_KEY='YOUR_GOOGLE_KEY_HERE'^M$
+export ANTHROPIC_API_KEY='YOUR_ANTHROPIC_KEY_HERE'^M$
+```
+
+The `^M` represents the carriage return character. When the environment variables were loaded, these carriage returns were included as part of the API key strings. The `httpx` library (used by the `openai` library) correctly identified this character as illegal in an HTTP header value, leading to the `LocalProtocolError`.
+
+Creating a new `.env` file from scratch resolved the issue. The carriage return character no longer appeared:
+
+```bash
+$ cat -vET .env.example
+export OPENAI_API_KEY='YOUR_OPENAI_KEY_HERE'$
+export GOOGLE_API_KEY='YOUR_GOOGLE_KEY_HERE'$
+export ANTHROPIC_API_KEY='YOUR_ANTHROPIC_KEY_HERE'$
+```
+
+And the script ran successfully.
