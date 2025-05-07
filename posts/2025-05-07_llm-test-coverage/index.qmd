@@ -1,5 +1,5 @@
 ---
-title: "Enhancing Test Coverage Reports for LLMs"
+title: "Enriching Test Coverage Reports for LLMs"
 author: "Greg Gandenberger"
 date: 2025-05-07
 categories: [llms, testing, software-engineering]
