@@ -1,4 +1,7 @@
 /.quarto/
 /_site/
 
+.cursorindexingignore
+.specstory/
 .ipynb_checkpoints/
+
