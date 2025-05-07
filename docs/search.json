@@ -200,7 +200,7 @@
     "href": "posts/2025-05-07_llm-test-coverage/index.html#conclusion-a-tool-not-a-panacea",
     "title": "Enhancing Test Coverage Reports for LLMs",
     "section": "Conclusion: A Tool, Not a Panacea",
-    "text": "Conclusion: A Tool, Not a Panacea\nIt is important to keep in mind that test coverage is just a heuristic. Even 100% test coverage is not sufficient to guarantee that code is well-tested, nor is it necessary. It might be more trouble than it is worth, even with LLMs, especially for code that is changing rapidly.\nThat said, checking for coverage gaps can be a useful way to find code that is not as well-tested as it should be. LLMs can make addressing those gaps easier than ever. However, we need to use something like the script above to give them the relevant information in a format that they can work with effectively."
+    "text": "Conclusion: A Tool, Not a Panacea\nIt is important to keep in mind that test coverage is just a heuristic. Even 100% test coverage is not sufficient to guarantee that code is well-tested, nor is it necessary. It might be more trouble than it is worth, even with LLMs, especially for code that is changing rapidly.\nThat said, checking for coverage gaps can be a useful way to find code that is not as well-tested as it should be. LLMs can make addressing those gaps easier than ever, especially if we use something like the script above to give them the relevant information in a format that they can work with effectively."
   },
   {
     "objectID": "posts/2018-03-10_ordered-dicts/ordered_dicts.html",

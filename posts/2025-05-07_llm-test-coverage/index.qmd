@@ -80,4 +80,4 @@ exit $cov_status            # 0 if good, 2 if coverage too low
 
 It is important to keep in mind that test coverage is just a heuristic. Even 100% test coverage is not sufficient to guarantee that code is well-tested, nor is it necessary. It might be more trouble than it is worth, even with LLMs, especially for code that is changing rapidly.
 
-That said, checking for coverage gaps can be a useful way to find code that is not as well-tested as it should be. LLMs can make addressing those gaps easier than ever. However, we need to use something like the script above to give them the relevant information in a format that they can work with effectively.
+That said, checking for coverage gaps can be a useful way to find code that is not as well-tested as it should be. LLMs can make addressing those gaps easier than ever, especially if we use something like the script above to give them the relevant information in a format that they can work with effectively.
