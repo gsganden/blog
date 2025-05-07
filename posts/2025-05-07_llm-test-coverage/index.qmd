@@ -1,10 +1,13 @@
 ---
-title: "Addressing Test Coverage Gaps with LLMs"
+title: "Enhancing Test Coverage Reports for LLMs"
 author: "Greg Gandenberger"
 date: 2025-05-07
-categories: [llms, testing, software-engineering] # Add relevant categories
-image: "image.jpg" # Add a relevant image
---- 
+categories: [llms, testing, software-engineering]
+image: "images/robot.png"
+image_caption: "LLMs are useful for addressing test coverage gaps, but they need a bit of help."
+---
+
+![LLMs are useful for addressing test coverage gaps, but they need a bit of help. (Illustration generated with the help of ChatGPT.)](images/robot.png)
 
 ## The Allure of AI-Powered Test Coverage
 
@@ -22,7 +25,7 @@ For instance, in one of my development sessions, a coverage report indicated lin
 
 **The solution lies in enhancing our coverage reports.** The `pytest-cov` extension for `pytest` doesn't offer a built-in way to directly output the *content* of missing lines to the terminal. It can show line numbers or generate annotated files, but for LLM interaction, we need a more direct approach: a list of the actual code lines that are missing coverage, annotated with their original line numbers to help the LLM (and us) locate them.
 
-Here is a bash script that addresses this problem. It runs `pytest` with coverage, and if the tests pass, it then processes the coverage data to output the specific lines of code that were not executed, along with their file names and line numbers.
+**Here is a bash script that addresses this problem.** It runs `pytest` with coverage, and if the tests pass, it then processes the coverage data to output the specific lines of code that were not executed, along with their file names and line numbers.
 
 ```bash
 #!/usr/bin/env bash

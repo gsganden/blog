@@ -95,9 +95,15 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Blog">
+<meta property="og:image" content="https://gandenberger.org/posts/2025-05-07_llm-test-coverage/images/robot.png">
 <meta property="og:site-name" content="Blog">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1536">
 <meta name="twitter:title" content="Blog">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gandenberger.org/posts/2025-05-07_llm-test-coverage/images/robot.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1536">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -158,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="computer vision">computer vision <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cuda">cuda <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data engineering">data engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="debugging">debugging <span class="quarto-category-count">(2)</span></div><div class="category" data-category="deep learning">deep learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="docker">docker <span class="quarto-category-count">(1)</span></div><div class="category" data-category="evals">evals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="gpu">gpu <span class="quarto-category-count">(1)</span></div><div class="category" data-category="jupyter">jupyter <span class="quarto-category-count">(1)</span></div><div class="category" data-category="llms">llms <span class="quarto-category-count">(2)</span></div><div class="category" data-category="math">math <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ml">ml <span class="quarto-category-count">(4)</span></div><div class="category" data-category="oss">oss <span class="quarto-category-count">(2)</span></div><div class="category" data-category="pandas">pandas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="til">til <span class="quarto-category-count">(3)</span></div><div class="category" data-category="training">training <span class="quarto-category-count">(1)</span></div><div class="category" data-category="vscode">vscode <span class="quarto-category-count">(1)</span></div><div class="category" data-category="wildebeest">wildebeest <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="computer vision">computer vision <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cuda">cuda <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data engineering">data engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="debugging">debugging <span class="quarto-category-count">(2)</span></div><div class="category" data-category="deep learning">deep learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="docker">docker <span class="quarto-category-count">(1)</span></div><div class="category" data-category="evals">evals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="gpu">gpu <span class="quarto-category-count">(1)</span></div><div class="category" data-category="jupyter">jupyter <span class="quarto-category-count">(1)</span></div><div class="category" data-category="llms">llms <span class="quarto-category-count">(3)</span></div><div class="category" data-category="math">math <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ml">ml <span class="quarto-category-count">(4)</span></div><div class="category" data-category="oss">oss <span class="quarto-category-count">(2)</span></div><div class="category" data-category="pandas">pandas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="software-engineering">software-engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="testing">testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="til">til <span class="quarto-category-count">(3)</span></div><div class="category" data-category="training">training <span class="quarto-category-count">(1)</span></div><div class="category" data-category="vscode">vscode <span class="quarto-category-count">(1)</span></div><div class="category" data-category="wildebeest">wildebeest <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -171,7 +177,48 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="til,debugging,python,llms" data-listing-date-sort="1744174800000" data-listing-file-modified-sort="1744318040219" data-listing-reading-time-sort="1.085">
+<div class="quarto-post image-right" data-index="0" data-categories="llms,testing,software-engineering" data-listing-date-sort="1746594000000" data-listing-file-modified-sort="1746633550014" data-listing-reading-time-sort="3.49">
+<div class="thumbnail">
+<p><a href="./posts/2025-05-07_llm-test-coverage/index.html"> <img src="./posts/2025-05-07_llm-test-coverage/images/robot.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/2025-05-07_llm-test-coverage/index.html">
+<h3 class="no-anchor listing-title">
+Enhancing Test Coverage Reports for LLMs
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('llms'); return false;">
+llms
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('testing'); return false;">
+testing
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('software-engineering'); return false;">
+software-engineering
+</div>
+</div>
+<a href="./posts/2025-05-07_llm-test-coverage/index.html">
+<div class="listing-description">
+<strong>Achieving high test coverage can be a slog.</strong> Manually writing tests for every nook and cranny is…
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/2025-05-07_llm-test-coverage/index.html">
+<div class="listing-date">
+May 7, 2025
+</div>
+<div class="listing-author">
+Greg Gandenberger
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="til,debugging,python,llms" data-listing-date-sort="1744174800000" data-listing-file-modified-sort="1744318040219" data-listing-reading-time-sort="1.085">
 <div class="thumbnail">
 <a href="./posts/2025-04-09_til_debugging-api-connection-error-carriage-returns/index.html">
 <div class="thumbnail-image">
@@ -219,7 +266,7 @@ Greg Gandenberger
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="til,ml,training,debugging" data-listing-date-sort="1743051600000" data-listing-file-modified-sort="1743128774854" data-listing-reading-time-sort="1.605">
+<div class="quarto-post image-right" data-index="2" data-categories="til,ml,training,debugging" data-listing-date-sort="1743051600000" data-listing-file-modified-sort="1743128774854" data-listing-reading-time-sort="1.605">
 <div class="thumbnail">
 <p><a href="./posts/2025-03-27_til_how-max-run-duration-affects-loss-curve/index.html"> <img src="./posts/2025-03-27_til_how-max-run-duration-affects-loss-curve/images/two_loss_curves.png" class="thumnail-image"> </a></p>
 </div>
@@ -263,7 +310,7 @@ Greg Gandenberger
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="til,vscode,docker,gpu,cuda" data-listing-date-sort="1741928400000" data-listing-file-modified-sort="1741976816128" data-listing-reading-time-sort="1.45">
+<div class="quarto-post image-right" data-index="3" data-categories="til,vscode,docker,gpu,cuda" data-listing-date-sort="1741928400000" data-listing-file-modified-sort="1741976816128" data-listing-reading-time-sort="1.45">
 <div class="thumbnail">
 <a href="./posts/2025-03-14_til_vscode-gpu-containers/index.html">
 <div class="thumbnail-image">
@@ -314,7 +361,7 @@ Greg Gandenberger
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="ml,llms,evals,math" data-listing-date-sort="1741154400000" data-listing-file-modified-sort="1741227677468" data-listing-reading-time-sort="6.11">
+<div class="quarto-post image-right" data-index="4" data-categories="ml,llms,evals,math" data-listing-date-sort="1741154400000" data-listing-file-modified-sort="1741227677468" data-listing-reading-time-sort="6.11">
 <div class="thumbnail">
 <p><a href="./posts/2025-03-05_llm-math-evaluation-best-practices/index.html"> <img src="./posts/2025-03-05_llm-math-evaluation-best-practices/image.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -358,7 +405,7 @@ Greg Gandenberger
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="ml,jupyter,pandas" data-listing-date-sort="1628139600000" data-listing-file-modified-sort="1739989872749" data-listing-reading-time-sort="0.745">
+<div class="quarto-post image-right" data-index="5" data-categories="ml,jupyter,pandas" data-listing-date-sort="1628139600000" data-listing-file-modified-sort="1739989872749" data-listing-reading-time-sort="0.745">
 <div class="thumbnail">
 <p><a href="./posts/2021-08-05_pandas-styling/pandas_styling.html"> <img src="./posts/2021-08-05_pandas-styling/correlation_matrix.png" class="thumnail-image"> </a></p>
 </div>
@@ -399,7 +446,7 @@ Greg Gandenberger
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="python,data engineering,computer vision,deep learning,wildebeest,oss" data-listing-date-sort="1596085200000" data-listing-file-modified-sort="1739906724106" data-listing-reading-time-sort="2.98">
+<div class="quarto-post image-right" data-index="6" data-categories="python,data engineering,computer vision,deep learning,wildebeest,oss" data-listing-date-sort="1596085200000" data-listing-file-modified-sort="1739906724106" data-listing-reading-time-sort="2.98">
 <div class="thumbnail">
 <p><a href="./posts/2020-07-30_introducing-wildebeest/introducing_wildebeest.html"> <img src="./posts/2020-07-30_introducing-wildebeest/wildebeest.webp" class="thumnail-image"> </a></p>
 </div>
@@ -449,7 +496,7 @@ Greg Gandenberger
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="deep learning,ml,computer vision,wildebeest,oss" data-listing-date-sort="1585198800000" data-listing-file-modified-sort="1739886868330" data-listing-reading-time-sort="1.61">
+<div class="quarto-post image-right" data-index="7" data-categories="deep learning,ml,computer vision,wildebeest,oss" data-listing-date-sort="1585198800000" data-listing-file-modified-sort="1739886868330" data-listing-reading-time-sort="1.61">
 <div class="thumbnail">
 <p><a href="./posts/2020-03-26_fast-and-reproducible-deep-learning/fast_and_reproducible_deep_learning.html"> <img src="./posts/2020-03-26_fast-and-reproducible-deep-learning/wildebeest.webp" class="thumnail-image"> </a></p>
 </div>
