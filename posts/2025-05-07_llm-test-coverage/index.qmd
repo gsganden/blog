@@ -76,6 +76,10 @@ fi
 exit $cov_status            # 0 if good, 2 if coverage too low
 ```
 
+LLMs have a much easier time identifying the correct lines to address based on the output of this script:
+
+![](images/after.png)
+
 ## Conclusion: A Tool, Not a Panacea
 
 It is important to keep in mind that test coverage is just a heuristic. Even 100% test coverage is not sufficient to guarantee that code is well-tested, nor is it necessary. It might be more trouble than it is worth, even with LLMs, especially for code that is changing rapidly.
