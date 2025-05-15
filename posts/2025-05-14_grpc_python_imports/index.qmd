@@ -1,0 +1,25 @@
+---
+title: "TIL: Fixing gRPC Python Imports"
+author: "Greg Gandenberger"
+date: "2025-05-14"
+categories: [til, grpc, python, software-engineering]
+---
+
+I was reacquainting myself with gRPC by creating a basic ["Hello, world!" project](https://github.com/gsganden/grpc_python_hello_world) when I ran into a problem: I wanted to put the generated code files in their own directory, but then imports within those files failed:
+
+```python
+ModuleNotFoundError: No module named 'helloworld_pb2'
+```
+
+It turns out that protobuf [simply does not generate correct imports in this situation](https://github.com/protocolbuffers/protobuf/issues/7061). LLMs suggested adding an `option python_package` line to my `.protos` file, but that option is not supported. Actual solutions include putting the generated files in the project root directory and [wrapping the protobuf generation command in a script](https://github.com/protocolbuffers/protobuf/issues/7061#issuecomment-2653091946) that fixes the imports. However, the approach I landed on is to make small addition to the `__init__.py` file within the `generated_grpc/` package:
+
+   ```python
+   from importlib import import_module
+   import sys
+
+   _messages_module = import_module(".helloworld_pb2", package=__name__)
+
+   sys.modules.setdefault("helloworld_pb2", _messages_module)
+   ```
+
+I prefer this approach to the alternatives because it is only annoying once. It allows me to use standard commands and a sensible directory structure. The only cost is a bit of ugliness in a file that I will probably never look at again. I can live with that!
