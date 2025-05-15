@@ -24,4 +24,4 @@ The approach I landed on is to **add a few lines to the `__init__.py` file withi
    sys.modules.setdefault("helloworld_pb2", _messages_module)
    ```
 
-I prefer this approach to the alternatives because it is only annoying once. It allows me to use standard commands and a sensible directory structure. The only cost is a bit of ugliness in a file that I will probably never look at again. I can live with that!
+I prefer this approach to the alternatives because **it is only annoying once.** It allows me to use standard commands and a sensible directory structure. The only cost is a bit of ugliness in a file that I will probably never look at again. I can live with that!
