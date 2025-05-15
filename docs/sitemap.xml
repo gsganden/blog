@@ -2,94 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gandenberger.org/posts/2025-03-05_llm-math-evaluation-best-practices/index.html</loc>
-    <lastmod>2025-05-15T01:26:58.184Z</lastmod>
+    <lastmod>2025-05-15T01:27:56.417Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2015-12-14_knapsack/knapsack.html</loc>
-    <lastmod>2025-05-15T01:26:58.722Z</lastmod>
+    <lastmod>2025-05-15T01:27:56.927Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-02-22_til_math-verify-2/til_math-verify-2.html</loc>
-    <lastmod>2025-05-15T01:26:59.105Z</lastmod>
+    <lastmod>2025-05-15T01:27:57.312Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-02-19_til_llmfoundry-eval-2/til_llmfoundry-eval-2.html</loc>
-    <lastmod>2025-05-15T01:26:59.437Z</lastmod>
+    <lastmod>2025-05-15T01:27:57.674Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-03-27_til_how-max-run-duration-affects-loss-curve/index.html</loc>
-    <lastmod>2025-05-15T01:26:59.777Z</lastmod>
+    <lastmod>2025-05-15T01:27:58.016Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-03-14_til_vscode-gpu-containers/index.html</loc>
-    <lastmod>2025-05-15T01:27:00.108Z</lastmod>
+    <lastmod>2025-05-15T01:27:58.354Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2019-12-02_evaluating-classifiers-pt4/evaluating_classifiers_pt4.html</loc>
-    <lastmod>2025-05-15T01:27:00.573Z</lastmod>
+    <lastmod>2025-05-15T01:27:58.832Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-05-14_grpc_python_imports/index.html</loc>
-    <lastmod>2025-05-15T01:27:00.896Z</lastmod>
+    <lastmod>2025-05-15T01:27:59.153Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2019-11-26_evaluating-classifiers-pt3/evaluating_classifiers_pt_3.html</loc>
-    <lastmod>2025-05-15T01:27:01.423Z</lastmod>
+    <lastmod>2025-05-15T01:27:59.690Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2021-08-05_pandas-styling/pandas_styling.html</loc>
-    <lastmod>2025-05-15T01:27:01.764Z</lastmod>
+    <lastmod>2025-05-15T01:28:00.045Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-05-07_llm-test-coverage/index.html</loc>
-    <lastmod>2025-05-15T01:27:02.151Z</lastmod>
+    <lastmod>2025-05-15T01:28:00.416Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2018-03-10_ordered-dicts/ordered_dicts.html</loc>
-    <lastmod>2025-05-15T01:27:02.526Z</lastmod>
+    <lastmod>2025-05-15T01:28:00.819Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-02-18_til_llmfoundry-eval/til_llmfoundry-eval.html</loc>
-    <lastmod>2025-05-15T01:27:02.894Z</lastmod>
+    <lastmod>2025-05-15T01:28:01.173Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2019-11-20_evaluating-classifiers-pt2/evaluating_classifiers_pt_2.html</loc>
-    <lastmod>2025-05-15T01:27:03.270Z</lastmod>
+    <lastmod>2025-05-15T01:28:01.546Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-02-20_til_math-verify/til_math-verify.html</loc>
-    <lastmod>2025-05-15T01:27:03.724Z</lastmod>
+    <lastmod>2025-05-15T01:28:02.037Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2020-07-30_introducing-wildebeest/introducing_wildebeest.html</loc>
-    <lastmod>2025-05-15T01:27:04.090Z</lastmod>
+    <lastmod>2025-05-15T01:28:02.406Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2019-11-14_evaluating-classifier-pt1/evaluating_classifiers_pt_1.html</loc>
-    <lastmod>2025-05-15T01:27:04.538Z</lastmod>
+    <lastmod>2025-05-15T01:28:02.885Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-04-09_til_debugging-api-connection-error-carriage-returns/index.html</loc>
-    <lastmod>2025-05-15T01:27:04.860Z</lastmod>
+    <lastmod>2025-05-15T01:28:03.224Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2025-02-14_fine-tuning-on-regression-task/fine_tuning_on_regression_tasks.html</loc>
-    <lastmod>2025-05-15T01:27:05.645Z</lastmod>
+    <lastmod>2025-05-15T01:28:04.017Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/posts/2020-03-26_fast-and-reproducible-deep-learning/fast_and_reproducible_deep_learning.html</loc>
-    <lastmod>2025-05-15T01:27:05.980Z</lastmod>
+    <lastmod>2025-05-15T01:28:04.353Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/index.html</loc>
-    <lastmod>2025-05-15T01:27:06.558Z</lastmod>
+    <lastmod>2025-05-15T01:28:04.905Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/about.html</loc>
-    <lastmod>2025-05-15T01:27:06.864Z</lastmod>
+    <lastmod>2025-05-15T01:28:05.202Z</lastmod>
   </url>
   <url>
     <loc>https://gandenberger.org/blog.html</loc>
-    <lastmod>2025-05-15T01:27:07.291Z</lastmod>
+    <lastmod>2025-05-15T01:28:05.621Z</lastmod>
   </url>
 </urlset>

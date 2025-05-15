@@ -216,9 +216,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+<section id="problem" class="level1">
+<h1>Problem</h1>
 <p>I was reacquainting myself with gRPC by creating a basic <a href="https://github.com/gsganden/grpc_python_hello_world">“Hello, world!” project</a> when I ran into a problem: <strong>I wanted to put the generated code files in their own <code>generated_grpc</code> directory, but then imports within those files failed:</strong></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ModuleNotFoundError: No module named <span class="st">'helloworld_pb2'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>It turns out that <strong>protobuf <a href="https://github.com/protocolbuffers/protobuf/issues/7061">simply does not generate correct imports in this situation</a></strong>. LLMs suggested adding an <code>option python_package</code> line to my <code>.protos</code> file, but that option is not supported. Actual solutions include putting the generated files in the project root directory and <a href="https://github.com/protocolbuffers/protobuf/issues/7061#issuecomment-2653091946">wrapping the protobuf generation command in a script</a> that fixes the imports.</p>
+<p>It turns out that <strong>protobuf <a href="https://github.com/protocolbuffers/protobuf/issues/7061">simply does not generate correct imports in this situation</a></strong>.</p>
+</section>
+<section id="solution" class="level1">
+<h1>Solution</h1>
+<p>LLMs suggested adding an <code>option python_package</code> line to my <code>.protos</code> file, but that option is not supported. Actual solutions include putting the generated files in the project root directory and <a href="https://github.com/protocolbuffers/protobuf/issues/7061#issuecomment-2653091946">wrapping the protobuf generation command in a script</a> that fixes the imports.</p>
 <p>The approach I landed on is to <strong>add a few lines to the <code>__init__.py</code> file within the <code>generated_grpc/</code> package</strong>:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> importlib <span class="im">import</span> import_module</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
@@ -229,6 +235,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>I prefer this approach to the alternatives because <strong>it is only annoying once.</strong> It allows me to use standard commands and a sensible directory structure. The only cost is a bit of ugliness in a file that I will probably never look at again. I can live with that!</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
