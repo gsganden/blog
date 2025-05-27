@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: profile.jpg
+image: images/profile_20250526.jpeg
 about:
   template: jolla
   links:
@@ -15,20 +15,28 @@ about:
       href: https://github.com/gsganden
 ---
 
-I am a machine learning engineer.
+I am currently open to work! I am looking for an L5-L6 ML or AI Engineering role. My resume is [here](https://lnkd.in/gd3Xp63C). You can also find me on [LinkedIn](https://www.linkedin.com/in/greggandenberger/), [GitHub](https://github.com/gsganden), and [X](https://x.com/GGandenberger).
 
-Public projects:
+## Skills
 
-- [Wildebeest](https://wildebeest-library.readthedocs.io/en/latest/) (Python file processing framework)
+- **AI Engineering:** Developing applications powered by LLMs and other foundation models
+- **Machine Learning Engineering:** Building systems for efficiently managing machine learning lifecycles, including data pipelines and production monitoring
+- **Machine Learning Model Development:** Creating deep learning, computer vision, and tabular data models
+- **Statistics & Analytics:** MA in statistics, PhD thesis in the foundations of statistics, some practical experience. Not my primary focus, but I can get the job done in a pinch.
+
+## Public projects
+
+- [Meal Planner](https://github.com/gsganden/meal_planner) (AI-Powered Meal Planner (WIP))
 - [Model Inspector](https://gsganden.github.io/model_inspector) (machine learning visualization library)
+- [Wildebeest](https://wildebeest-library.readthedocs.io/en/latest/) (Python file processing framework)
 - [Autofocus](https://github.com/uptake/autofocus) (camera trap animal classification application)
 
-Previous employers:
+## Previous Employers
 
-- [Cruise](https://www.getcruise.com/) (autonomous vehicles)
+- Cruise (autonomous vehicles)
 - Argo AI (autonomous vehicles)
-- [ShopRunner](https://www.shoprunner.com/) (ecommerce)
-- [General Assembly](https://generalassemb.ly/) (tech education)
+- ShopRunner (ecommerce)
+- General Assembly (tech education)
 - Uptake (industrial analytics)
 
 In a previous life I received a Ph.D. in History and Philosophy of Science and an MA in Statistics, both from the University of Pittsburgh. My academic research addressed questions about the proper use of statistical methods, such as [what to do with the results of an experiment that ends earlier than planned](https://arxiv.org/abs/1707.00214).

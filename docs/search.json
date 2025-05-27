@@ -410,7 +410,28 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I am a machine learning engineer.\nPublic projects:\n\nWildebeest (Python file processing framework)\nModel Inspector (machine learning visualization library)\nAutofocus (camera trap animal classification application)\n\nPrevious employers:\n\nCruise (autonomous vehicles)\nArgo AI (autonomous vehicles)\nShopRunner (ecommerce)\nGeneral Assembly (tech education)\nUptake (industrial analytics)\n\nIn a previous life I received a Ph.D. in History and Philosophy of Science and an MA in Statistics, both from the University of Pittsburgh. My academic research addressed questions about the proper use of statistical methods, such as what to do with the results of an experiment that ends earlier than planned."
+    "text": "I am currently open to work! I am looking for an L5-L6 ML or AI Engineering role. My resume is here. You can also find me on LinkedIn, GitHub, and X."
+  },
+  {
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About",
+    "section": "Skills",
+    "text": "Skills\n\nAI Engineering: Developing applications powered by LLMs and other foundation models\nMachine Learning Engineering: Building systems for efficiently managing machine learning lifecycles, including data pipelines and production monitoring\nMachine Learning Model Development: Creating deep learning, computer vision, and tabular data models\nStatistics & Analytics: MA in statistics, PhD thesis in the foundations of statistics, some practical experience. Not my primary focus, but I can get the job done in a pinch."
+  },
+  {
+    "objectID": "about.html#public-projects",
+    "href": "about.html#public-projects",
+    "title": "About",
+    "section": "Public projects",
+    "text": "Public projects\n\nMeal Planner (AI-Powered Meal Planner (WIP))\nModel Inspector (machine learning visualization library)\nWildebeest (Python file processing framework)\nAutofocus (camera trap animal classification application)"
+  },
+  {
+    "objectID": "about.html#previous-employers",
+    "href": "about.html#previous-employers",
+    "title": "About",
+    "section": "Previous Employers",
+    "text": "Previous Employers\n\nCruise (autonomous vehicles)\nArgo AI (autonomous vehicles)\nShopRunner (ecommerce)\nGeneral Assembly (tech education)\nUptake (industrial analytics)\n\nIn a previous life I received a Ph.D. in History and Philosophy of Science and an MA in Statistics, both from the University of Pittsburgh. My academic research addressed questions about the proper use of statistical methods, such as what to do with the results of an experiment that ends earlier than planned."
   },
   {
     "objectID": "blog.html",
