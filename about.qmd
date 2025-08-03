@@ -15,7 +15,9 @@ about:
       href: https://github.com/gsganden
 ---
 
-I am currently open to work! I am looking for an L5-L6 ML or AI Engineering role that I can perform from Chicago. My resume is [here](https://lnkd.in/gd3Xp63C). You can also find me on [LinkedIn](https://www.linkedin.com/in/greggandenberger/), [GitHub](https://github.com/gsganden), and [X](https://x.com/GGandenberger).
+I am an ML / AI engineer working on planner reasoning evaluation at Waymo.
+
+You can find me on [LinkedIn](https://www.linkedin.com/in/greggandenberger/), [GitHub](https://github.com/gsganden), and [X](https://x.com/GGandenberger).
 
 ## Skills
 
