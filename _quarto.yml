@@ -8,9 +8,9 @@ website:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/gsganden
+        href: https://github.com/
       - icon: twitter
-        href: https://x.com/GGandenberger
+        href: https://twitter.com
   twitter-card: true
   open-graph: true
   site-url: "https://gandenberger.org"
