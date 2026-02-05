@@ -1,0 +1,98 @@
+---
+title: "AI-Assisted Coding Workflows: From Casual to Spec-Driven"
+author: "Greg Gandenberger"
+date: 2025-07-20
+categories: [ai, coding, productivity, development]
+---
+
+**AI coding tools are powerful.
+However, it is difficult to take advantage of their power without making a mess.**
+You can use them conservatively, for instance by sticking with small tab completions and question answering, but then your productivity gains will be modest.
+You can use them aggressively, for instance by using background agents to create entire PRs, but then you may have difficulty steering the results, keeping the codebase clean, ensuring security, and so on.
+
+**Choosing an appropriate workflow for the situation can help.**
+I have been experimenting with various workflows for AI-assisted development while developing AI-powered recipe book apps.
+**I have identified four workflows that I think are worth considering.**
+
+## 1. Vibe Coding
+
+<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">There&#39;s a new kind of coding I call &quot;vibe coding&quot;, where you fully give in to the vibes, write exponentials, and forget that the code even exists. It&#39;s possible because the LLMs (e.g. Cursor Composer w Sonnet) are getting too good. Also I just talk to Composer with SuperWhisper so I barely even touch the keyboard. I ask for the dumbest things like "decrease the padding on the sidebar by half" because I'm too lazy to find it. I "Accept All" always, I don't read the diffs anymore. When I get error messages I just copy paste them in with no comment, usually that fixes it. The code grows beyond my usual comprehension, I'd have to really read through it for a while. Sometimes the LLMs can't fix a bug so I just work around it or ask for random changes until it goes away. It's not too bad for throwaway weekend projects, but still quite amusing. I'm building a project or webapp, but it's not really coding - I just see stuff, say stuff, run stuff, and copy paste stuff, and it mostly works.</p>&mdash; Andrej Karpathy (@karpathy) <a href="https://twitter.com/karpathy/status/1886192184808149383?ref_src=twsrc%5Etfw">February 2, 2025</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Andrej Karpathy coined the term "vibe coding" to refer to a type of workflow with two key components:
+
+1. Ignore the code.
+2. Prompt the model in an ad hoc, iterative way.
+
+**This approach can work amazingly well for relatively simple, low-stakes projects.** You can use it with a variety of tools, including app builders (e.g. v0.dev, Bolt), AI-enabled IDEs (e.g., Cursor, Windsurf), and CLI assistants (e.g., Claude Code, Codex CLI, Gemini CLI).
+
+**Of course, this approach has limits.**
+You may struggle to communicate all of your requirements through ad hoc prompting.
+The codebase may become too complex for the agent to iterate on effectively.
+Even if the result seems to work, you will not have much basis for confidence that it is reliable, scalable, or secure.
+
+I used this approach to develop an initial [recipe book prototype](https://gsganden--recipe-adjustor-fasthtml-app.modal.run/) in under an hour.
+
+## 2. Interactive Pairing
+
+In this approach you work closely with an LLM to **develop one component of the code at a time.**
+The LLM might write most of the code, but you remain in the loop and understand each component before proceeding.
+You can combine this approach with traditional workflows such as test-driven development.
+You thus retain full understanding and control over the code while using AI to help solve the difficult parts and breeze through the tedious parts.
+
+This approach is almost all upside compared to coding without AI assistance.
+However, it has a limited ceiling.
+It might give you a 2x productivity improvement.
+It will not give you 10x.
+You might decide to accept that tradeoff, but you will need discipline to stick with it in the face of more AI-driven workflows.
+
+This approach fits most naturally with AI-enabled IDEs such as Cursor and Windsurf. However, it may require using some of the following techniques to keep those tools reined in:
+
+- Avoid particularly "eager" models such as Claude 3.7 Sonnet, which is notorious for proactively making changes that you did not request.
+- Tell the model (perhaps through rules files) to make only the changes you explicitly request and to make them one at a time.
+- Use less agentic tools, such as tab completion and "Ask" mode rather than "Agent" mode.
+
+START HEREThis approach works well alongside asynchronous delegation. I used it for recipe book V1 where I wanted to understand the core architecture while accelerating implementation.
+
+## 3. Asynchronous Delegation
+
+**Concept:** Give the AI agent a well-defined ticket or task, then review the resulting pull request. This treats the AI more like a junior developer on your team.
+
+**When it's good:** Excellent for taking development speed up another notch while maintaining control over the final code. You get the benefits of parallel work without losing oversight.
+
+**Tools:**
+- OpenAI Codex
+- Cursor background agents
+- Claude Code with auto-accept edits enabled
+
+The key is learning to write good tickets and developing efficient PR review skills for AI-generated code.
+
+## 4. Spec-Driven Vibe Coding
+
+**Concept:** Ignore the implementation entirely and "compile" your code from rigorous specifications. You focus on defining what you want rather than how to build it.
+
+**When it's good:** This approach can massively increase velocity while maintaining control over the aspects you care about most - the functionality and behavior rather than implementation details.
+
+**Tools (Early Stage):**
+- SpecFlow (developed by SpecStory) - an emerging tool in this space
+- Other specification-to-code tools are rapidly developing
+
+I'm experimenting with this approach for recipe book V2, combining it with asynchronous delegation for even greater efficiency.
+
+## Choosing Your Workflow
+
+These workflows aren't mutually exclusive - in fact, they often work best in combination:
+
+- **Casual + Interactive:** Great for prototyping with the option to understand key components
+- **Interactive + Asynchronous:** Maintain control over core logic while delegating implementation details  
+- **Asynchronous + Spec-Driven:** Define high-level specs, delegate implementation, review results
+
+The key is matching the workflow to your goals:
+- **Learning/Understanding:** Interactive Pairing
+- **Speed/Exploration:** Casual Vibe Coding  
+- **Controlled Acceleration:** Asynchronous Delegation
+- **Maximum Velocity:** Spec-Driven Vibe Coding
+
+As these tools continue to evolve, I expect spec-driven approaches to become increasingly powerful, potentially becoming the dominant workflow for many types of software development.
+
+What workflows have you found effective? I'm particularly interested in experiences with spec-driven approaches as these tools mature. 
